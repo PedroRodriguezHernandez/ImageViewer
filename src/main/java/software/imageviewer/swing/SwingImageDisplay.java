@@ -73,7 +73,9 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
             Resizer resizer = new Resizer(new Dimension(this.getWidth(),this.getHeight()));
             Dimension resized = resizer.resize(new Dimension(bitmap.getWidth(), bitmap.getHeight()));
             int y = (this.getHeight() - resized.height) / 2;
-            g.drawImage(this.bitmap, order.offset, y, resized.width, resized.height,null);
+            int x =  order.offset + (width() - resized.width) / 2;
+            System.out.println(order.offset);
+            g.drawImage(this.bitmap, x, y, resized.width, resized.height,null);
         }
     }
 
