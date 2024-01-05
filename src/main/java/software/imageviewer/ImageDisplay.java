@@ -13,7 +13,7 @@ public interface ImageDisplay {
     }
 
     interface Realeased {
-        Dragged Null = offset -> {};
+        Realeased Null = offset -> {};
         void at(int offset);
     }
 }

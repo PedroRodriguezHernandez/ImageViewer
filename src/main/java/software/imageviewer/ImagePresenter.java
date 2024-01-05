@@ -12,6 +12,8 @@ public class ImagePresenter {
         this.display = display;
         this.display.on((Dragged) this::dragged);
         this.display.on((Realeased) this::realeased);
+        this.display.clear();
+        this.display.paint(image.name(), 0);
     }
 
     private void realeased(int offset) {
